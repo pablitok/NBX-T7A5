@@ -23,7 +23,7 @@ MANIFEST="${OUT_DIR%/}/manifest.txt"
   echo "# Source: ${SRC_DIR}"
   echo
   find "${SRC_DIR}" -type f | sort | while read -r f; do
-    sz="$(stat -c '%s' "$f")"
+    sz="$(wc -c < "$f" | tr -d '[:space:]')"
     hash="$(sha256sum "$f" | awk '{print $1}')"
     rel="${f#"${SRC_DIR}"/}"
     printf '%s  %s  %s\n' "$hash" "$sz" "$rel"

@@ -17,14 +17,14 @@
 
 Owner should gather stock packages from official or authorized channels and place them locally in:
 
-- `/home/runner/work/NBX-T7A5/NBX-T7A5/artifacts/stock/`
+- `artifacts/stock/`
 
 Then run:
 
 ```bash
-bash /home/runner/work/NBX-T7A5/NBX-T7A5/scripts/extract_and_hash_artifacts.sh \
-  /home/runner/work/NBX-T7A5/NBX-T7A5/artifacts/stock \
-  /home/runner/work/NBX-T7A5/NBX-T7A5/artifacts/manifest
+bash scripts/extract_and_hash_artifacts.sh \
+  artifacts/stock \
+  artifacts/manifest
 ```
 
 Commit only manifest text/metadata that is safe and legally shareable.

@@ -32,8 +32,7 @@ If full device dumps and legally usable binaries are not available, a real port 
 
 ## Quick start
 
-1. Follow `/home/runner/work/NBX-T7A5/NBX-T7A5/docs/01-collection.md`
-2. Place owner-provided images under `/home/runner/work/NBX-T7A5/NBX-T7A5/artifacts/` (gitignored by default)
+1. Follow `docs/01-collection.md`
+2. Place owner-provided images under `artifacts/` (gitignored by default)
 3. Run:
-   - `bash /home/runner/work/NBX-T7A5/NBX-T7A5/tests/validate_scripts.sh`
-
+   - `bash tests/validate_scripts.sh`

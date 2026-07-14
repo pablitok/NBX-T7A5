@@ -11,8 +11,7 @@ This phase is read-only. Do **not** flash, wipe, format, or write partitions.
 ## Run
 
 ```bash
-bash /home/runner/work/NBX-T7A5/NBX-T7A5/scripts/collect_adb_info.sh \
-  /home/runner/work/NBX-T7A5/NBX-T7A5/collection-output
+bash scripts/collect_adb_info.sh collection-output
 ```
 
 ## What is collected
