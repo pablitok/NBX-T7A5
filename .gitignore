@@ -1,0 +1,7 @@
+# Owner-provided firmware and dumps (potentially sensitive/proprietary)
+artifacts/
+out/
+collection-output/
+
+# macOS / editor noise
+.DS_Store
