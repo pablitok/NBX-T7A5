@@ -22,7 +22,7 @@ adb wait-for-device
 adb shell getprop > "${RUN_DIR}/getprop.raw.txt" || true
 
 # Keep non-secret lines only.
-grep -Evi 'serial|imei|meid|imsi|iccid|mac|wlan\.mac|bluetooth\.address|subscriber|msisdn|line1number' \
+grep -Evi 'serial|imei|meid|imsi|iccid|mac|wlan[.]mac|bluetooth[.]address|subscriber|msisdn|line1number' \
   "${RUN_DIR}/getprop.raw.txt" > "${RUN_DIR}/getprop.safe.txt" || true
 
 collect() {

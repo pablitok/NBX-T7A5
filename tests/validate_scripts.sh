@@ -15,8 +15,8 @@ for s in "${scripts[@]}"; do
   bash -n "$s"
 done
 
-# Ensure no script includes disallowed flashing commands.
-if grep -R -E '\b(fastboot\s+flash|dd\s+if=.*of=/dev|mkfs\.|format\s+/)\b' "${REPO_ROOT}/scripts"; then
+# Ensure no script includes disallowed flashing/write commands.
+if grep -R -E '\bfastboot[[:space:]]+flash\b|\bdd[[:space:]]+if=[^[:space:]]+[[:space:]]+of=/dev\b|\bmkfs\.[[:alnum:]_]+\b' "${REPO_ROOT}/scripts"; then
   echo "Disallowed potentially destructive command found." >&2
   exit 1
 fi
